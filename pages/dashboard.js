@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { useRouter } from 'next/router';
 import { db, auth } from '../firebase';
@@ -33,15 +33,11 @@ function Map() {
   const [companies, setCompanies] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [userId, setUserId] = useState(null);
-  const [userInitiative, setUserInitiative] = useState(null);
-  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [userInitiative, setUserInitiative] = useState(null);;
   const [map, setMap] = useState(null);
   const [CustomMarker, setCustomMarker] = useState(null);
   const [key, setKey] = useState(Date.now());
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadError, setLoadError] = useState(null);
-  const retryCount = useRef(0);
-  const maxRetries = 3;
+  const [loadMap, setLoadMap] = useState(true);
   const router = useRouter();
   const { query } = router;
 
@@ -131,6 +127,19 @@ function Map() {
   }, [shop]);
 
   useEffect(() => {
+    const handleRouteChange = () => {
+      setLoadMap(false);
+      setTimeout(() => setLoadMap(true), 3);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
+
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         setUserId(user.uid);
@@ -176,11 +185,6 @@ function Map() {
     };
   }, [router]);
 
-  useEffect(() => {
-    // Force map to reload when component mounts or key changes
-    setMap(null);
-  }, [key]);
-
   const handleConfirmDonation = async () => {
     if (userId && userInitiative) {
       try {
@@ -218,18 +222,19 @@ function Map() {
       <MantineProvider>
         <div className={styles.container}>
           <div className={styles.mapContainer}>
-            <LoadScript googleMapsApiKey={API_KEY}>
-              <GoogleMap
-                key={key}
-                mapContainerClassName={styles.mapContainer}
-                center={center}
-                zoom={12}
-                options={mapOptions}
-                onLoad={handleMapLoad}
-              >
-                {/* Custom markers are now handled in the useEffect */}
-              </GoogleMap>
-            </LoadScript>
+            {loadMap && (
+              <LoadScript googleMapsApiKey={API_KEY}>
+                <GoogleMap
+                  mapContainerClassName={styles.mapContainer}
+                  center={center}
+                  zoom={12}
+                  options={mapOptions}
+                  onLoad={handleMapLoad}
+                >
+                  {/* Custom markers are handled in the useEffect */}
+                </GoogleMap>
+              </LoadScript>
+            )}
             {showPopup && (
               <DonationPopup
                 onClose={handleClosePopup}
@@ -244,7 +249,7 @@ function Map() {
                 userId={userId}
                 currentInitiative={userInitiative}
                 onUpdateInitiative={(initiative) => setUserInitiative(initiative)}
-                isVisible={isSidebarVisible}
+                
               />
             </div>
           )}
