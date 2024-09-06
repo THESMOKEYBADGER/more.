@@ -23,17 +23,17 @@ import classes from '../styles/FeaturesCards.module.css';
 const mockdata = [
   {
     title: 'GreenPop',
-    description: 'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
+    description: 'A Treevolution – a world where people and nature thrive together. When we give back and create value for the earth and our fellow human beings, joy is created – changing our own lives and changing the world. We’re on a mission to have fun and share this joy with as many people as possible.',
     icon: '/images/greenPop-logo.png',
   },
   {
     title: 'EarthChild',
-    description: 'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
+    description: 'The Earthchild Project is a Non-Profit Organisation operating in the Western Cape, South Africa. We offer complimentary education to under-resourced schools with a focus on the environment, health and self-development and leadership.',
     icon: '/images/earthChild-logo.png',
   },
   {
     title: 'Animal Ocean',
-    description: "They're popular, but they're rare. Trainers who show them off recklessly may be targeted by thieves",
+    description: "Animal Ocean has provided a variety of services to scientists on the coastline, from assistance with sampling and data collection to skippering and vessel support, as well as donating images and video to researchers",
     icon: '/images/animalOcean-logo.png',
   },
 ];
@@ -83,18 +83,17 @@ export default function About() {
 
         <Container size="lg" py="xl">
           <Group justify="center">
-            <Badge variant="filled" size="lg">
+            <Badge className={classes.badge}variant="filled" size="lg">
               Currently associated NGO's
             </Badge>
           </Group>
 
           <Title order={2} className={classes.title} ta="center" mt="sm">
-            Integrate effortlessly with any technology stack
+            Find out about who we support
           </Title>
 
           <Text c="dimmed" className={classes.description} ta="center" mt="md">
-            Every once in a while, you'll see a Golbat that's missing some fangs. This happens when
-            hunger drives it to try biting a Steel-type Pokémon.
+            At the end of every month we count up how many orders were placed associated with each initaitive, and then donate directly to them.
           </Text>
 
           <FeaturesCards />
