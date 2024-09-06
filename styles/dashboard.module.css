@@ -1,0 +1,118 @@
+.pageWrapperDash {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space between header, content, and footer */
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  padding: 20px; /* Optional padding around the content */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.container {
+  margin-top: -30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Maximum width for the entire container */
+  gap: 20px; /* Space between the map and the switcher */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.mapContainer {
+  padding: 4px;
+  flex: 3; /* Takes up 75% of the container on larger screens */
+  height: 100%; /* Ensure it uses the full height of its parent */
+  min-height: 500px; /* Minimum height for better visibility on desktop */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.switcherContainer {
+  flex: 1; /* Takes up 25% of the container on larger screens */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 4px; /* Padding inside the switcher container */
+  height: fit-content; /* Ensure it uses the full height of its parent */
+  min-height: fit-content; /* Minimum height to match the map container */
+   /* Allows scrolling if content overflows */
+ 
+}
+
+.header {
+  width: 100%;
+  background-color: #ffffff; /* White background for the header */
+  padding: 10px 20px; /* Padding around the header */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the header */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure the header stays on top */
+}
+
+.logo {
+  margin-left: 20px;
+  padding: 5px;
+  height: 40px; /* Adjust the logo size */
+}
+
+.mapTitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: large;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    margin-top: -10px;
+    flex-direction: column; /* Stack the map and switcher vertically */
+    align-items: center; /* Center both map and switcher */
+    gap: 10px; /* Reduce the gap between elements */
+    padding: 0; /* Remove extra padding on mobile */
+  }
+
+  .mapContainer {
+    width: 100%; /* Make map container full width */
+    height: 120px; /* Adjust height for mobile */
+    margin-bottom: 10px; /* Margin to separate from the switcher */
+    padding: 4px; /* Add padding to ensure content is well-spaced */
+    box-sizing: border-box; /* Include padding in width/height */
+  }
+
+  .switcherContainer {
+    width: 100%; /* Make switcher container full width */
+    height: auto; /* Adjust height based on content */
+    padding: 4px; /* Add padding inside switcher */
+    box-sizing: border-box; /* Include padding in width/height */
+    text-align: center; /* Center text and elements inside the switcher */
+  }
+}
+
+
+
+.bouncingBall {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ff6347; /* Tomato color, you can change this */
+  border-radius: 50%;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-200px); /* Controls the height of the bounce */
+  }
+}

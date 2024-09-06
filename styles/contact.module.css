@@ -1,0 +1,24 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    
+    
+    min-height: 100vh; /* Full height of the viewport */
+    padding: 20px; /* Optional padding around the content */
+   
+    
+  }
+
+  .content{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+
+
+  @media (max-width: 576px) { /* Adjust the breakpoint as needed */
+
+    .content{
+        padding:10px;
+    }
+  }

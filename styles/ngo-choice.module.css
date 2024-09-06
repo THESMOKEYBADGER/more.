@@ -1,0 +1,139 @@
+/* Container for the entire page */
+.pageContainer {
+    margin-top: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+
+  }
+  
+  /* Container for the logo and subtitle */
+  .logoContainer {
+    text-align: center;
+    margin-bottom: 0px; /* Space between logo and choices */
+  }
+  
+  /* Style for the logo */
+  .logo {
+    max-width: 200px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  /* Style for the subtitle */
+  .subtitle {
+    color: black;
+    margin-top: -50px;
+    font-size: 1.2em;
+  }
+  
+  /* Flex container for choices */
+  .flexContainer {
+    
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    max-width: 500px; /* Limit width for better layout */
+  }
+  
+  /* Flex item within the container */
+  .flexItem {
+    width: 100%;
+    background: white;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  }
+  
+  /* Style for the list group */
+  .listGroup {
+    display: grid;
+    gap: 10px;
+  }
+  
+  /* Hide radio buttons visually but keep them accessible */
+  .listGroupItemCheck {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  /* Style for the radio button labels */
+  .listGroupItem {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid  #b4d6cd;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    width: 400px;
+  }
+  
+  .listGroupItem:hover {
+    background-color: #b4d6cd33; /* Light background color on hover */
+  }
+  
+  .listGroupItem.selected {
+    background-color:#b4d6cd;/* Selected background color */
+    color: white;
+  }
+  
+  /* Style for submit button */
+  .submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D35931;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #ba4e2b;
+  }
+  
+
+
+/* Container for each list item and its link */
+.listGroupItemContainer {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between radio button and label */
+  }
+  
+  /* Style for the label to align text and link icon */
+  .listGroupItem {
+    display: flex;
+    justify-content: space-between; /* Space between text and link icon */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Ensure label takes full width of container */
+  }
+  
+  /* Style for the link button (SVG icon) */
+  .linkButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .linkButton:hover {
+    opacity: 0.8;
+  }
+  

@@ -1,0 +1,56 @@
+.footer {
+    margin-top: 160px; /* Increased top margin for more spacing */
+    position: relative; /* Position relative to enable the pseudo-element */
+    width: 100%; /* Ensure the footer spans the full width */
+    background-color: #fff; /* Optional: Background color to make sure the border is visible */
+    padding-left: 85px;
+    padding-right: 85px; /* Added padding to ensure space on the right */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Move line to the top */
+    left: 0;
+    width: 100%;
+    height: 1px; /* Border thickness */
+    background-color: var(--mantine-color-gray-2); /* Border color */
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px; /* Padding for general spacing */
+    position: relative; /* Position relative to ensure the border is above this content */
+    z-index: 1; /* Ensure content is above the border */
+    
+    @media (max-width: 768px) { /* Responsive adjustments */
+        flex-direction: column;
+        padding: 16px;
+        text-align: center; /* Center content on mobile */
+    }
+}
+
+.links {
+    display: flex;
+    gap: 24px; /* Space between links */
+    margin-right: 40px; /* Additional space between links and social icons */
+    justify-content: center; /* Center links horizontally on larger screens */
+    
+    @media (max-width: 768px) { /* Responsive adjustments */
+        margin-right: 0; /* Remove margin-right on mobile */
+        margin-bottom: 16px; /* Space below links on mobile */
+        justify-content: center; /* Center links horizontally on mobile */
+    }
+}
+
+.iconContainer {
+    display: flex;
+    gap: 16px; /* Space between social icons */
+    justify-content: center; /* Center social icons horizontally */
+    
+    @media (max-width: 768px) { /* Responsive adjustments */
+        margin-bottom: 16px; /* Space below icons on mobile */
+    }
+}
