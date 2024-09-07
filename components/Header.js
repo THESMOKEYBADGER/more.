@@ -9,7 +9,7 @@ import classes from '../styles/Header.module.css';
 const links = [
   { link: '/dashboard', label: 'Home' },
   { link: '/about', label: 'About' },
-  { link: '/leaderboards', label: 'Leaderboards' },
+  { link: '/leaderboard', label: 'Leaderboard' },
   { link: '/contact', label: 'Contact' },
 ];
 

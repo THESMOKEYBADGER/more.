@@ -28,7 +28,7 @@ function GetInTouchSimple() {
     <main className={styles.content}>
     
       <form onSubmit={form.onSubmit(() => {})}>
-        <Title
+        <Title className={styles.title}
           order={2}
           size="h1"
           style={{ fontFamily: 'Greycliff CF, var(--mantine-font-family)' }}

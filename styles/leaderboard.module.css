@@ -1,0 +1,82 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: space-between;
+    /* Space between header, content, and footer */
+    align-items: center;
+    min-height: 100vh;
+    /* Full height of the viewport */
+    padding: 20px;
+    /* Optional padding around the content */
+    box-sizing: border-box;
+    /* Include padding in width/height */
+
+}
+
+.title {
+    font-size: rem(34px);
+    font-weight: 900;
+
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        font-size: rem(24px);
+    }
+}
+
+
+.content {
+    margin-top: 50px;
+}
+
+
+
+
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+
+
+
+
+
+.badge {
+    background-color: #D35931;
+
+}
+
+
+
+.description {
+    max-width: rem(600px);
+    margin: auto;
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: #D35931;
+        width: rem(45px);
+        height: rem(2px);
+        margin-top: var(--mantine-spacing-sm);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.card {
+    border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+}
+
+.cardTitle {
+    &::after {
+        content: '';
+        display: block;
+        background-color: #D35931;
+        width: rem(45px);
+        height: rem(2px);
+        margin-top: var(--mantine-spacing-sm);
+    }
+}
