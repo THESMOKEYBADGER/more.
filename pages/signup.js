@@ -8,6 +8,7 @@ import styles from '../styles/SignUp.module.css';
 export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState(""); // New state for username
   const [postalCode, setPostalCode] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -19,17 +20,20 @@ export default function SignUp() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
+
+      // Store the user information in Firestore
       await setDoc(doc(db, "users", user.uid), {
         email: user.email,
+        username, // Include username in the Firestore document
         postalCode,
       });
+
       router.push('/ngo-choice'); // Redirect to the NGO choice page after signup
     } catch (error) {
       setError(error.message);
       setLoading(false);
     }
   };
-
 
   return (
     <div className={styles.container}>
@@ -40,6 +44,14 @@ export default function SignUp() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className={styles.input}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Username" // New input for username
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           className={styles.input}
           required
         />
@@ -65,3 +77,5 @@ export default function SignUp() {
     </div>
   );
 }
+
+

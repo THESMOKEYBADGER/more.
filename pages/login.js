@@ -51,12 +51,11 @@ export default function Login() {
       
       // We don't set loading to false here, as we want to keep the spinner until the new page loads
     } catch (error) {
-      setError(error.message);
+      setError('Incorrect username or password. Please try again.');
       setLoading(false);
     }
   };
 
-  // Pass loading state to parent component
   useEffect(() => {
     if (window.setGlobalLoading) {
       window.setGlobalLoading(loading);

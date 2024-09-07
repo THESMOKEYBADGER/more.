@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScriptNext } from '@react-google-maps/api';
 import { useRouter } from 'next/router';
 import { db, auth } from '../firebase';
 import { collection, getDocs, doc, getDoc, setDoc } from 'firebase/firestore';
@@ -33,11 +33,12 @@ function Map() {
   const [companies, setCompanies] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [userId, setUserId] = useState(null);
-  const [userInitiative, setUserInitiative] = useState(null);;
+  const [userInitiative, setUserInitiative] = useState(null);
   const [map, setMap] = useState(null);
   const [CustomMarker, setCustomMarker] = useState(null);
   const [key, setKey] = useState(Date.now());
   const [loadMap, setLoadMap] = useState(true);
+  const [username, setUsername] = useState(null); // State to hold the username
   const router = useRouter();
   const { query } = router;
 
@@ -147,6 +148,7 @@ function Map() {
           const userDoc = await getDoc(doc(db, 'users', user.uid));
           const userData = userDoc.data();
           setUserInitiative(userData.initiative);
+          setUsername(userData.username); // Set the username after fetching
         } catch (error) {
           console.error('Error fetching user initiative: ', error);
         }
@@ -168,22 +170,6 @@ function Map() {
       });
     }
   }, [map, companies, CustomMarker]);
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      if (url === '/login') {
-        router.reload();
-      } else if (url.includes('/dashboard')) {
-        setKey(Date.now());
-      }
-    };
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
 
   const handleConfirmDonation = async () => {
     if (userId && userInitiative) {
@@ -217,13 +203,15 @@ function Map() {
   }, [createCustomMarkerClass]);
 
   return (
+
     <div className={styles.pageWrapperDash}>
       <HeaderSimple />
       <MantineProvider>
+
         <div className={styles.container}>
           <div className={styles.mapContainer}>
             {loadMap && (
-              <LoadScript googleMapsApiKey={API_KEY}>
+              <LoadScriptNext googleMapsApiKey={API_KEY}>
                 <GoogleMap
                   mapContainerClassName={styles.mapContainer}
                   center={center}
@@ -233,7 +221,7 @@ function Map() {
                 >
                   {/* Custom markers are handled in the useEffect */}
                 </GoogleMap>
-              </LoadScript>
+              </LoadScriptNext>
             )}
             {showPopup && (
               <DonationPopup
@@ -249,7 +237,6 @@ function Map() {
                 userId={userId}
                 currentInitiative={userInitiative}
                 onUpdateInitiative={(initiative) => setUserInitiative(initiative)}
-                
               />
             </div>
           )}
