@@ -3,9 +3,9 @@ import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/
 import classes from '../styles/FooterCentered.module.css';
 
 const links = [
-  { link: '#', label: 'Home' },
-  { link: '#', label: 'About' },
-  { link: '#', label: 'Contact' },
+  { link: '/dashboard', label: 'Home' },
+  { link: '/about', label: 'About' },
+  { link: '/contact', label: 'Contact' },
 
 
 ];

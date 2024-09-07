@@ -76,7 +76,7 @@ function GetInTouchSimple() {
         />
 
         <Group justify="center" mt="xl">
-          <Button type="submit" size="md">
+          <Button className={styles.button}type="submit" size="md">
             Send message
           </Button>
         </Group>
