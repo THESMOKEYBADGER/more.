@@ -178,6 +178,7 @@ function Map() {
           timestamp: new Date(),
           initiative: userInitiative,
           shop: shop,
+        
         });
         console.log('Donation confirmed and added to database');
         setShowPopup(false);
