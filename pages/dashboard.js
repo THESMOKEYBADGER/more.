@@ -164,7 +164,7 @@ function Map() {
         new CustomMarker(
           company.location,
           map,
-          '/images/coffee-icon.png',
+          'public/images/coffee-icon.png',
           () => handleMarkerClick(company)
         );
       });
