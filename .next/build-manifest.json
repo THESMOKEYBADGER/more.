@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/0BUyS0h1pDsCCuv_yi3Rv/_buildManifest.js",
-    "static/0BUyS0h1pDsCCuv_yi3Rv/_ssgManifest.js"
+    "static/FLsv1r3fyxIbxZ2EmFbF2/_buildManifest.js",
+    "static/FLsv1r3fyxIbxZ2EmFbF2/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -37,7 +37,7 @@
       "static/chunks/main-84a2b674050972a6.js",
       "static/chunks/675-f6b4bb7aa5cb9513.js",
       "static/css/dbb50fd420b33798.css",
-      "static/chunks/253-c8fd8a5d7501d3b4.js",
+      "static/chunks/253-04892f044da919dc.js",
       "static/css/4bbb6453bbcb8f77.css",
       "static/chunks/pages/about-9e69e73e1a4c5a1d.js"
     ],
@@ -61,7 +61,7 @@
       "static/chunks/main-84a2b674050972a6.js",
       "static/chunks/675-f6b4bb7aa5cb9513.js",
       "static/css/dbb50fd420b33798.css",
-      "static/chunks/253-c8fd8a5d7501d3b4.js",
+      "static/chunks/253-04892f044da919dc.js",
       "static/chunks/265-0bbd04ee042b1342.js",
       "static/css/0373e5323ca7aed5.css",
       "static/chunks/pages/contact-5d3c6ad93c4230df.js"
@@ -77,7 +77,7 @@
       "static/chunks/675-f6b4bb7aa5cb9513.js",
       "static/css/dbb50fd420b33798.css",
       "static/chunks/438-251ec25e5861364b.js",
-      "static/chunks/253-c8fd8a5d7501d3b4.js",
+      "static/chunks/253-04892f044da919dc.js",
       "static/chunks/7-8f44365ea8a2e377.js",
       "static/css/ae56541681b9d7db.css",
       "static/chunks/pages/dashboard-f0fde3879d97804a.js"
@@ -88,7 +88,7 @@
       "static/chunks/main-84a2b674050972a6.js",
       "static/chunks/675-f6b4bb7aa5cb9513.js",
       "static/css/dbb50fd420b33798.css",
-      "static/chunks/253-c8fd8a5d7501d3b4.js",
+      "static/chunks/253-04892f044da919dc.js",
       "static/css/574820512c0dbf53.css",
       "static/chunks/pages/leaderboard-f0baf97287f83b3b.js"
     ],
@@ -101,7 +101,7 @@
       "static/chunks/580-eec9570159a70d38.js",
       "static/chunks/438-251ec25e5861364b.js",
       "static/css/5952c7f424a1cbe9.css",
-      "static/chunks/pages/login-79de11a810a1bfcf.js"
+      "static/chunks/pages/login-4adffb88b1900c6c.js"
     ],
     "/manage-companies": [
       "static/chunks/webpack-19bbcf3205081b00.js",
