@@ -7,12 +7,14 @@ import styles from '../styles/Login.module.css';
 import useBouncingBall from '../components/ballAnimation';
 
 export default function Login() {
+  const router = useRouter();
+  const { shop } = router.query;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [key, setKey] = useState(0);
-  const router = useRouter();
+  
 
   useBouncingBall();
 

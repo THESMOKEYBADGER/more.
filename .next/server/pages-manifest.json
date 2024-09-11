@@ -1,1 +1,7 @@
-{"/_error":"pages/_error.js","/admin-dashboard":"pages/admin-dashboard.html","/api/notify-users":"pages/api/notify-users.js","/about":"pages/about.html","/dashboard":"pages/dashboard.html","/_app":"pages/_app.js","/login":"pages/login.html","/":"pages/index.html","/api/save-user-data":"pages/api/save-user-data.js","/ngo-choice":"pages/ngo-choice.html","/contact":"pages/contact.html","/leaderboard":"pages/leaderboard.html","/manage-companies":"pages/manage-companies.html","/signup":"pages/signup.html","/_document":"pages/_document.js","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/login": "pages/login.js",
+  "/dashboard": "pages/dashboard.js"
+}

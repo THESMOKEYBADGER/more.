@@ -5,11 +5,10 @@ const nextConfig = {
     return [
       {
         source: '/login/:shop',
-        destination: '/login',
+        destination: '/login?shop=:shop',
       },
     ];
-  },
-  // Remove any custom webpack configurations related to CSS
-};
+  }
+}
 
 module.exports = nextConfig;
