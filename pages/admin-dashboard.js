@@ -99,17 +99,25 @@ const AdminDashboard = () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'donations'));
       const donationsData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
+  
+      // Map of numeric initiatives to their names
+      const initiativeNames = {
+        1: 'Earthchild',
+        2: 'GreenPop',
+        3: 'Animal Ocean',
+      };
+  
       // Calculate donations by initiative
       const donationsByInit = {};
       donationsData.forEach(donation => {
         const initiative = donation.initiative;
         if (initiative) {
-          donationsByInit[initiative] = (donationsByInit[initiative] || 0) + 1;
+          const initiativeName = initiativeNames[initiative] || 'Unknown Initiative'; // Fallback if initiative doesn't match
+          donationsByInit[initiativeName] = (donationsByInit[initiativeName] || 0) + 1;
         }
       });
       setDonationsByInitiative(donationsByInit);
-
+  
       // Calculate donations by company
       const donationsByComp = {};
       donationsData.forEach(donation => {
@@ -123,6 +131,7 @@ const AdminDashboard = () => {
       console.error('Error fetching donations: ', error);
     }
   };
+  
 
 
   // Data for the charts
