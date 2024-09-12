@@ -1,0 +1,108 @@
+[debug] [2024-09-12T10:38:59.934Z] ----------------------------------------------------------------------
+[debug] [2024-09-12T10:38:59.939Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-09-12T10:38:59.939Z] CLI Version:   13.15.4
+[debug] [2024-09-12T10:38:59.939Z] Platform:      darwin
+[debug] [2024-09-12T10:38:59.939Z] Node Version:  v20.16.0
+[debug] [2024-09-12T10:38:59.940Z] Time:          Thu Sep 12 2024 12:38:59 GMT+0200 (South Africa Standard Time)
+[debug] [2024-09-12T10:38:59.940Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-12T10:39:00.031Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-12T10:39:00.031Z] > authorizing via signed-in user (gabrielrobbertze@gmail.com)
+[debug] [2024-09-12T10:39:00.032Z] [iam] checking project more-f1579 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-12T10:39:00.034Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/more-f1579:testIamPermissions [none]
+[debug] [2024-09-12T10:39:00.034Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/more-f1579:testIamPermissions x-goog-quota-user=projects/more-f1579
+[debug] [2024-09-12T10:39:00.035Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/more-f1579:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-12T10:39:01.856Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/more-f1579:testIamPermissions 200
+[debug] [2024-09-12T10:39:01.857Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/more-f1579:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-12T10:39:01.858Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/more-f1579 [none]
+[debug] [2024-09-12T10:39:02.566Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/more-f1579 200
+[debug] [2024-09-12T10:39:02.567Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/more-f1579 {"projectId":"more-f1579","projectNumber":"675524787031","displayName":"more","name":"projects/more-f1579","resources":{"hostingSite":"more-f1579"},"state":"ACTIVE","etag":"1_5c9501e5-5223-43e5-9d46-ff8cc61b1eac"}
+[debug] [2024-09-12T10:39:04.797Z] defaultcredentials: writing to file /Users/gabe/.config/firebase/gabrielrobbertze_gmail_com_application_default_credentials.json
+[debug] [2024-09-12T10:39:04.800Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites pageToken=&pageSize=10
+[debug] [2024-09-12T10:39:06.921Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites 200
+[debug] [2024-09-12T10:39:06.921Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites {"sites":[{"name":"projects/more-f1579/sites/more-f1579","defaultUrl":"https://more-f1579.web.app","appId":"1:675524787031:web:e122a81b58e5154dd15c12","type":"DEFAULT_SITE"}]}
+[debug] [2024-09-12T10:39:06.921Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:675524787031:web:e122a81b58e5154dd15c12/config [none]
+[debug] [2024-09-12T10:39:07.687Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:675524787031:web:e122a81b58e5154dd15c12/config 200
+[debug] [2024-09-12T10:39:07.687Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:675524787031:web:e122a81b58e5154dd15c12/config {"projectId":"more-f1579","appId":"1:675524787031:web:e122a81b58e5154dd15c12","storageBucket":"more-f1579.appspot.com","apiKey":"AIzaSyAS2RAJanlflg5Xudy8VCFiUMAz1tpEKFw","authDomain":"more-f1579.firebaseapp.com","messagingSenderId":"675524787031","measurementId":"G-TJSHHBM91X"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-09-12T10:39:12.138Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites/more-f1579 [none]
+[debug] [2024-09-12T10:39:14.158Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites/more-f1579 200
+[debug] [2024-09-12T10:39:14.158Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/more-f1579/sites/more-f1579 {"name":"projects/more-f1579/sites/more-f1579","defaultUrl":"https://more-f1579.web.app","appId":"1:675524787031:web:e122a81b58e5154dd15c12","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.6
+
+[info]   - Environments: .env.local
+
+
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] heartbeats undefined
+
+[info] ReferenceError: s is not defined
+    at /Users/gabe/Desktop/MORE/.next/server/pages/admin-dashboard.js:1:6217
+
+[info] 
+
+[info] > Build error occurred
+
+[info] Error: Failed to collect page data for /admin-dashboard
+    at /Users/gabe/Desktop/MORE/node_modules/next/dist/build/utils.js:1268:15 {
+  type: 'Error'
+}
+
+[debug] [2024-09-12T10:39:27.206Z] Error: ENOENT: no such file or directory, open '/Users/gabe/Desktop/MORE/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
