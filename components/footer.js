@@ -6,6 +6,8 @@ const links = [
   { link: '/dashboard', label: 'Home' },
   { link: '/about', label: 'About' },
   { link: '/contact', label: 'Contact' },
+
+
 ];
 
 export function FooterCentered() {
@@ -33,11 +35,9 @@ export function FooterCentered() {
           <ActionIcon size="lg" variant="default" radius="xl">
             <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
           </ActionIcon>
-          <Anchor href="https://www.instagram.com/more.cpt/" target="_blank">
-            <ActionIcon size="lg" variant="default" radius="xl">
-              <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-            </ActionIcon>
-          </Anchor>
+          <ActionIcon size="lg" variant="default" radius="xl">
+            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+          </ActionIcon>
         </Group>
       </div>
     </footer>
