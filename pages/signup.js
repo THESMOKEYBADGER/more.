@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import useBouncingBall from '../components/ballAnimation';
 import styles from '../styles/SignUp.module.css';
 
 export default function SignUp() {
@@ -13,6 +14,8 @@ export default function SignUp() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  useBouncingBall();
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -37,6 +40,7 @@ export default function SignUp() {
 
   return (
     <div className={styles.container}>
+      <div id="bouncingBall" className={styles.bouncingBall}></div>
       <form className={styles.form} onSubmit={handleSignUp}>
         <h1>Sign Up</h1>
         <input

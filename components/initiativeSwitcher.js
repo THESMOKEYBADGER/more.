@@ -10,9 +10,9 @@ const initiativeNames = {
 };
 
 const initiativeColors = {
-  1: '#F8BF62', // EarthChild project
-  2: '#00BF63', // Green Pop
-  3: '#5271FF', // Animal Ocean
+  1: '#5b3283', // EarthChild project
+  2: '#5b3283', // Green Pop
+  3: '#5b3283', // Animal Ocean
 };
 
 function InitiativeSwitcher({ userId, currentInitiative, onUpdateInitiative, isVisible }) {

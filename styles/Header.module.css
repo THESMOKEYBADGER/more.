@@ -37,7 +37,7 @@
     }
   
     [data-mantine-color-scheme] &[data-active] {
-      background-color: #b4d6cd;
+      background-color: #5b3283;
       color: var(--mantine-color-white);
     }
   }

@@ -37,9 +37,11 @@
   padding: 4px; /* Padding inside the switcher container */
   height: fit-content; /* Ensure it uses the full height of its parent */
   min-height: fit-content; /* Minimum height to match the map container */
+  ; /* Allow vertical scrolling if needed */
    /* Allows scrolling if content overflows */
  
 }
+
 
 .header {
   width: 100%;
