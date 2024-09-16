@@ -18,6 +18,9 @@
   
   background-color: #D35931;
 }
+.button:hover {
+  background-color: #adcbc3;
+}
 
   @media (max-width: 576px) { /* Adjust the breakpoint as needed */
 
