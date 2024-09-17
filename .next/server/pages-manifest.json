@@ -2,8 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/signup": "pages/signup.js",
+  "/this-is-us": "pages/this-is-us.js",
   "/ngo-choice": "pages/ngo-choice.js",
   "/": "pages/index.js",
-  "/signup": "pages/signup.js",
+  "/dashboard": "pages/dashboard.js",
   "/login": "pages/login.js"
 }

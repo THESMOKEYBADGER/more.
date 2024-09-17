@@ -8,7 +8,7 @@ import styles from '../styles/HeroBullets.module.css';
 
 export function HeroBullets() {
   return (
-    <Container size="md">
+    <Container size="md" className={styles.page}>
       <div className={styles.inner}>
         <div className={styles.content}>
           <Title className={styles.title}>
@@ -44,8 +44,8 @@ export function HeroBullets() {
         { <Image src={image.src} className={styles.image} /> }
       </div>
 
-      <Group mt={30}>
-            <Button radius="xl" size="md" className={styles.control}>
+      <Group className={styles.controlContainer}mt={30}>
+            <Button radius="xl" size="md" className={`${styles.control} ${styles.toDashboard}`} >
               To Dashboard
             </Button>
             <Button variant="default" radius="xl" size="md" className={styles.control}>
