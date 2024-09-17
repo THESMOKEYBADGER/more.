@@ -6,6 +6,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import styles from '../styles/Login.module.css';
 import useBouncingBall from '../components/ballAnimation';
 
+
 export default function Login() {
   const router = useRouter();
   const { shop } = router.query;
@@ -70,7 +71,7 @@ export default function Login() {
     <div className={styles.containerLogin} key={key}>
       <div id="bouncingBall" className={styles.bouncingBall}></div>
       <form className={styles.formLogin} onSubmit={handleLogin}>
-        <h1>Login</h1>
+        <h1 className={styles.title}>Login</h1>
         <input
           type="email"
           value={email}
