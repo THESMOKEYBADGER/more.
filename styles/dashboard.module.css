@@ -20,7 +20,7 @@
 }
 
 .mapContainer {
-  padding: 4px;
+  padding: 8px;
   flex: 3; /* Takes up 75% of the container on larger screens */
   height: 100%; /* Ensure it uses the full height of its parent */
   min-height: 500px; /* Minimum height for better visibility on desktop */
@@ -35,7 +35,7 @@
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 4px; /* Padding inside the switcher container */
+  padding: 8px; /* Padding inside the switcher container */
   height: fit-content; /* Ensure it uses the full height of its parent */
   min-height: fit-content; /* Minimum height to match the map container */
   ; /* Allow vertical scrolling if needed */

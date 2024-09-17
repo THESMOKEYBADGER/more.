@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { auth, db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import DashboardLayout from '../components/DashboardLayout';
-import styles from '../styles/ManageCompanies.module.css';
+import styles from '../styles/manage-companies.module.css';
 
 export default function ManageCompanies() {
   const [name, setName] = useState('');

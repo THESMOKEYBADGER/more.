@@ -1,7 +1,7 @@
 .header {
     height: rem(56px);
     margin-bottom: rem(120px);
-    background-color: var(--mantine-color-body);
+    background-color: #f2f2f2;
     border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
     width: 100%;
     display: flex;
@@ -9,6 +9,8 @@
     padding-left: 85px;
     padding-right: 230px;
     box-sizing: border-box;
+    border-radius: 8px;
+
   }
   
   .logo {
@@ -56,6 +58,7 @@
     .logo {
       padding-left: 0;
       margin-right: auto;
+      margin-left: -8px;
     }
   
     .inner {
@@ -81,6 +84,9 @@
       background-color: var(--mantine-color-body);
       padding: 40px;
       box-shadow: var(--mantine-shadow-sm);
+      margin-right: 20px;
+      margin-left: 20px;
+      border-radius: 8px;
     }
   
     /* Add some spacing between the links */

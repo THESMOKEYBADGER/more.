@@ -11,7 +11,7 @@ import Statistics from '../components/Admin-Dashboard-Components/Statistics';
 import TotalUsers from '../components/Admin-Dashboard-Components/TotalUsers';
 import Charts from '../components/Admin-Dashboard-Components/Charts';
 import CompanyList from '../components/Admin-Dashboard-Components/CompanyList';
-import styles from '../styles/ManageCompanies.module.css';
+import styles from '../styles/manage-companies.module.css';
 import AdminRoute from '../components/Admin-Dashboard-Components/AdminRoute';
 import '@mantine/core/styles.css';
 

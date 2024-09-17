@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ConfirmationAnimation from './ConfirmationAnimation';
-import styles from '../styles/donationPopup.module.css'; // Ensure the path is correct
+import styles from '../styles/donation-popup.module.css'; // Ensure the path is correct
 
 function DonationPopup({ onClose, onConfirm, shopName }) {
   const [showConfirmation, setShowConfirmation] = useState(false);

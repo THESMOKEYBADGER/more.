@@ -4,7 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import classes from '../styles/Header.module.css';
+import classes from '../styles/header.module.css';
 
 const links = [
   { link: '/dashboard', label: 'Home' },

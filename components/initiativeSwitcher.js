@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import styles from '../styles/initiativeSwitcher.module.css';
+import styles from '../styles/initiative-switcher.module.css';
 
 const initiativeNames = {
   1: 'EarthChild project',

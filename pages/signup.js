@@ -4,7 +4,7 @@ import { auth, db } from "../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import useBouncingBall from '../components/ballAnimation';
-import styles from '../styles/SignUp.module.css';
+import styles from '../styles/sign-up.module.css';
 
 export default function SignUp() {
   const [email, setEmail] = useState("");

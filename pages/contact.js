@@ -22,68 +22,72 @@ function GetInTouchSimple() {
 
   return (
     <MantineProvider>
-    <div className={styles.pageWrapper}>
-    <HeaderSimple />
+      <div className={styles.pageWrapper}>
+        <HeaderSimple />
 
-    <main className={styles.content}>
-    
-      <form onSubmit={form.onSubmit(() => {})}>
-        <Title className={styles.title}
-          order={2}
-          size="h1"
-          style={{ fontFamily: 'Greycliff CF, var(--mantine-font-family)' }}
-          fw={900}
-          ta="center"
-        >
-          Get in touch
-        </Title>
+        <main className={styles.content}>
 
-        <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
-          <TextInput
-            label="Name"
-            placeholder="Your name"
-            name="name"
-            variant="filled"
-            {...form.getInputProps('name')}
-          />
-          <TextInput
-            label="Email"
-            placeholder="Your email"
-            name="email"
-            variant="filled"
-            {...form.getInputProps('email')}
-          />
-        </SimpleGrid>
+          <form onSubmit={form.onSubmit(() => { })}>
+            <Title className={styles.title}
+              order={2}
+              size="h1"
+              style={{ fontFamily: 'Greycliff CF, var(--mantine-font-family)' }}
+              fw={900}
+              ta="center"
+            >
+              Get in touch
+            </Title>
 
-        <TextInput
-          label="Subject"
-          placeholder="Subject"
-          mt="md"
-          name="subject"
-          variant="filled"
-          {...form.getInputProps('subject')}
-        />
-        <Textarea
-          mt="md"
-          label="Message"
-          placeholder="Your message"
-          maxRows={10}
-          minRows={5}
-          autosize
-          name="message"
-          variant="filled"
-          {...form.getInputProps('message')}
-        />
+            <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+              <TextInput
+                label="Name"
+                placeholder="Your name"
+                name="name"
+                variant="filled"
+                classNames={{ input: styles.input }}
+                {...form.getInputProps('name')}
+              />
+              <TextInput
+                label="Email"
+                placeholder="Your email"
+                name="email"
+                variant="filled"
+                classNames={{input: styles.input}}
+                {...form.getInputProps('email')}
+              />
+            </SimpleGrid>
 
-        <Group justify="center" mt="xl">
-          <Button className={styles.button}type="submit" size="md">
-            Send message
-          </Button>
-        </Group>
-      </form>
+            <TextInput
+              label="Subject"
+              placeholder="Subject"
+              mt="md"
+              name="subject"
+              variant="filled"
+              classNames={{input: styles.input}}
+              {...form.getInputProps('subject')}
+            />
+            <Textarea
+              mt="md"
+              label="Message"
+              placeholder="Your message"
+              maxRows={10}
+              minRows={5}
+              autosize
+              name="message"
+              variant="filled"
+              classNames={{input: styles.input}}
+              {...form.getInputProps('message')}
+            />
 
-      </main>
-      <FooterCentered /> {/* Add the Footer component here */}
+            <Group justify="center" mt="xl">
+              <Button className={styles.button} type="submit" size="md">
+                Send message
+              </Button>
+            </Group>
+          </form>
+
+        </main>
+        <FooterCentered /> {/* Add the Footer component here */}
       </div>
     </MantineProvider>
   );

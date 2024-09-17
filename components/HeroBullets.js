@@ -4,7 +4,7 @@ import React from 'react';
 import { MantineProvider } from '@mantine/core';
 import '@mantine/core/styles.css';
 import image from '../public/images/hero-image.png';
-import styles from '../styles/HeroBullets.module.css';
+import styles from '../styles/hero-bullets.module.css';
 
 export function HeroBullets() {
   return (

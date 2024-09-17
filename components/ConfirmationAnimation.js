@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styles from '../styles/ConfirmationAnimation.module.css';
+import styles from '../styles/confirmation-animation.module.css';
 
 const ConfirmationAnimation = () => {
   return (

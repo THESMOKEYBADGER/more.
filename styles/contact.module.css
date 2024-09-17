@@ -5,6 +5,7 @@
     
     min-height: 100vh; /* Full height of the viewport */
     padding: 20px; /* Optional padding around the content */
+    background-color: #f2f2f2;
    
     
   }
@@ -38,4 +39,8 @@
     @media (max-width: $mantine-breakpoint-sm) {
         font-size: rem(24px);
     }
+}
+
+.input{
+  background-color: white;
 }

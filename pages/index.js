@@ -1,5 +1,5 @@
 // pages/index.js
-import styles from '../styles/Home.module.css';
+import styles from '../styles/home.module.css';
 import Image from 'next/image';
 
 export default function Home() {

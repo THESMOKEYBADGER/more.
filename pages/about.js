@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/about.module.css'; 
+import styles from '../styles/about.module.css';
 import { FooterCentered } from '../components/footer';
 import { HeaderSimple } from '../components/Header';
 import { MantineProvider } from '@mantine/core';
+import HeroBullets from '../components/HeroBullets';
 import '@mantine/core/styles.css';
 
 import {
@@ -18,7 +19,7 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 
-import classes from '../styles/FeaturesCards.module.css';
+import classes from '../styles/features-cards.module.css';
 
 const mockdata = [
   {
@@ -71,9 +72,8 @@ export default function About() {
       withGlobalStyles
       withNormalizeCSS
     >
-        
 
-        <div className={styles.pageWrapper}>
+      <div className={styles.pageWrapper}>
         <HeaderSimple />
         <Head>
           <title>About Us</title>
@@ -81,9 +81,13 @@ export default function About() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
+        <div className={`${classes.hero} ${classes.section}`}>
+          <HeroBullets />
+        </div>
+
         <Container size="lg" py="xl">
           <Group justify="center">
-            <Badge className={classes.badge}variant="filled" size="lg">
+            <Badge className={classes.badge} variant="filled" size="lg">
               Currently associated NGO's
             </Badge>
           </Group>

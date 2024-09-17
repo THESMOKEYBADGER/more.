@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
-import styles from '../styles/Login.module.css';
+import styles from '../styles/login.module.css';
 import useBouncingBall from '../components/ballAnimation';
 
 
