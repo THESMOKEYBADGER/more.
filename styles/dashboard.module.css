@@ -85,14 +85,14 @@
     width: 100%; /* Make map container full width */
     height: 120px; /* Adjust height for mobile */
     margin-bottom: 10px; /* Margin to separate from the switcher */
-    padding: 4px; /* Add padding to ensure content is well-spaced */
+    padding: 8px; /* Add padding to ensure content is well-spaced */
     box-sizing: border-box; /* Include padding in width/height */
   }
 
   .switcherContainer {
     width: 100%; /* Make switcher container full width */
     height: auto; /* Adjust height based on content */
-    padding: 4px; /* Add padding inside switcher */
+    padding: 8px; /* Add padding inside switcher */
     box-sizing: border-box; /* Include padding in width/height */
     text-align: center; /* Center text and elements inside the switcher */
   }

@@ -12,11 +12,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -32,25 +27,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/about.js"
     ],
-    "/login": [
+    "/contact": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/login.js"
+      "static/chunks/pages/contact.js"
     ],
-    "/ngo-choice": [
+    "/dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ngo-choice.js"
+      "static/chunks/pages/dashboard.js"
     ],
-    "/signup": [
+    "/leaderboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/signup.js"
-    ],
-    "/this-is-us": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/this-is-us.js"
+      "static/chunks/pages/leaderboard.js"
     ]
   },
   "ampFirstPages": []
