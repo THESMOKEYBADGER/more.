@@ -88,7 +88,7 @@ export default function Login() {
           className={styles.input}
           required
         />
-        <button type="submit" className={styles.button}>Login</button>
+        <button type="submit" className={styles.button}>Do more.</button>
         {error && <p className={styles.error}>{error}</p>}
       </form>
     </div>

@@ -1,12 +1,13 @@
 /* Container for the entire page */
 .pageContainer {
-    margin-top: -80px;
+    margin-top: -120px;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     height: 100vh; /* Full viewport height */
     padding: 20px;
+    background-color: #f5f5f5;
 
   }
   
@@ -24,9 +25,11 @@
   
   /* Style for the subtitle */
   .subtitle {
-    color: black;
     margin-top: -50px;
-    font-size: 1.2em;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 80px;
+    font-family: 'Greycliff CF', sans-serif;
   }
   
   /* Flex container for choices */
@@ -37,6 +40,7 @@
     align-items: center; /* Center vertically */
     width: 100%;
     max-width: 500px; /* Limit width for better layout */
+    font-family:'Greycliff CF', sans-serif;
   }
   
   /* Flex item within the container */
@@ -45,6 +49,7 @@
     background: white;
     border-radius: 10px; /* Rounded corners */
     padding: 20px;
+    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
   }
   
@@ -52,6 +57,7 @@
   .listGroup {
     display: grid;
     gap: 10px;
+    font-family:'Greycliff CF', sans-serif;
   }
   
   /* Hide radio buttons visually but keep them accessible */
@@ -64,27 +70,32 @@
     height: 0;
     width: 0;
     overflow: hidden;
+
   }
   
   /* Style for the radio button labels */
   .listGroupItem {
     cursor: pointer;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: transparent;
-    border: 1px solid  #b4d6cd;
+    border: 1px solid #ddd; /* Border for better visibility */
     transition: background-color 0.3s, color 0.3s;
     position: relative;
     width: 400px;
+    font-family:'Greycliff CF', sans-serif;
   }
   
   .listGroupItem:hover {
-    background-color: #b4d6cd33; /* Light background color on hover */
+    background-color: #7d7d7d0b;
   }
   
   .listGroupItem.selected {
-    background-color:#b4d6cd;/* Selected background color */
+    background-color: #5b3283; ;/* Selected background color */
     color: white;
+    .linkButton{
+      color: white;
+    }
   }
   
   /* Style for submit button */
@@ -95,6 +106,7 @@
     border: none;
     border-radius: 8px;
     color: white;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
   }

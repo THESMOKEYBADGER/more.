@@ -22,7 +22,7 @@
 
 .subtitle {
   margin-top: -50px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #666;
   margin-bottom: 80px;
 
@@ -37,7 +37,7 @@
   color: #fff;
   background-color: #d35931;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;

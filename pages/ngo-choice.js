@@ -66,7 +66,7 @@ export default function Choices() {
           height={200}
           className={styles.logo}
         />
-        <p className={styles.subtitle}>Choose Your Initiative</p>
+        <p className={styles.subtitle}>Choose your initiative</p>
       </div>
       <form onSubmit={handleSubmit} className={styles.flexContainer}>
         <div className={styles.flexItem}>

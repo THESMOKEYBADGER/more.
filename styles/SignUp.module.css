@@ -33,17 +33,17 @@
   .button {
     margin-top: 20px;
     width: 100%; 
-    padding: 10px;
+    padding: 10px 20px;
     background-color: #d35931;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     color: white;
     font-size: 16px;
     cursor: pointer;
   }
   
   .button:hover {
-    background-color: #adcbc3;
+    background-color: #b44c2a;
   }
   
   .error {
@@ -56,7 +56,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #ff6347; /* Change to your desired color */
+    background-color: #d35931; /* Change to your desired color */
     border-radius: 50%;
     /* Initial position */
     top: 0;

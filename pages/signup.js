@@ -42,7 +42,7 @@ export default function SignUp() {
     <div className={styles.container}>
       <div id="bouncingBall" className={styles.bouncingBall}></div>
       <form className={styles.form} onSubmit={handleSignUp}>
-        <h1>Sign Up</h1>
+        <h1>Register</h1>
         <input
           type="email"
           placeholder="Email"

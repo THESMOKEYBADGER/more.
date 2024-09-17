@@ -32,6 +32,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
     ],
+    "/ngo-choice": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/ngo-choice.js"
+    ],
     "/signup": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
