@@ -81,7 +81,7 @@ export default function About() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div className={`${classes.hero} ${classes.section}`}>
+        <div className={styles.hero}>
           <HeroBullets />
         </div>
 

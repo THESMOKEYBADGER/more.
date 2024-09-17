@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../../styles/ManageCompanies.module.css';
+import styles from '../../styles/manage-companies.module.css';
 
 const CompanyForm = ({ onAddCompany }) => {
   const [companyName, setCompanyName] = useState('');

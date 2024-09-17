@@ -1,6 +1,6 @@
 // components/DashboardLayout.js
 import React from 'react';
-import styles from '../styles/DashboardLayout.module.css'; // Import your CSS module
+import styles from '../styles/dashboard-layout.module.css'; // Import your CSS module
 
 const DashboardLayout = ({ children }) => {
   return (

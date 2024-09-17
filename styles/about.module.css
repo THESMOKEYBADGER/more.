@@ -34,9 +34,7 @@
 
 }
 
-.section {
-  margin: 2rem 0;
-}
+
 
 .subtitle {
   font-size: 1.5rem;
@@ -50,6 +48,11 @@
   background: #f0f0f0;
 }
 
+
+.hero{
+  height: 100vh;
+  margin-bottom: -100px;
+}
 
 
 
@@ -65,6 +68,9 @@
 @media (max-width: 576px) {
   .title {
     font-size: 1.5rem;
+  }
+  .hero{
+    margin-bottom:0px;
   }
 }
 

@@ -1,4 +1,4 @@
-import styles from '../../styles/ManageCompanies.module.css';
+import styles from '../../styles/manage-companies.module.css';
 
 const CompanyList = ({ companies }) => {
   return (

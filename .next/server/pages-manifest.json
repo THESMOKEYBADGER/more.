@@ -3,9 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/this-is-us": "pages/this-is-us.js",
-  "/signup": "pages/signup.js",
-  "/ngo-choice": "pages/ngo-choice.js",
-  "/login": "pages/login.js",
   "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/about": "pages/about.js",
+  "/login": "pages/login.js",
+  "/signup": "pages/signup.js",
+  "/ngo-choice": "pages/ngo-choice.js"
 }

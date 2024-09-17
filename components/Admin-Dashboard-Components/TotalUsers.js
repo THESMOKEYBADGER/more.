@@ -1,6 +1,6 @@
 // components/Admin-Dashboard-Components/TotalUsers.js
 
-import styles from '../../styles/ManageCompanies.module.css';
+import styles from '../../styles/manage-companies.module.css';
 
 const TotalUsers = ({ count }) => {
   return (
