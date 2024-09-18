@@ -41,7 +41,7 @@
 
 
 .badge {
-    background-color: #D35931;
+    background-color: #D35931 !important;
 
 }
 
@@ -76,3 +76,13 @@
         margin-top: var(--mantine-spacing-sm);
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        transition: margin-top 0.2s ease;
+    }
+}
+
+.pushDown {
+    margin-top: 50px; /* Adjust this value based on your mobile menu height */
+  }

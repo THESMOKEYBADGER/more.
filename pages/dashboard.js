@@ -40,6 +40,7 @@ function Map() {
   const [loadMap, setLoadMap] = useState(true);
   const [username, setUsername] = useState(null); // State to hold the username
   const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { query } = router;
 
   const shop = query.shop || '';
@@ -203,13 +204,16 @@ function Map() {
     setCustomMarker(() => CustomMarkerClass);
   }, [createCustomMarkerClass]);
 
+
+
   return (
 
+
     <div className={styles.pageWrapperDash}>
-      <HeaderSimple />
+      <HeaderSimple onMenuToggle={setMobileMenuOpen} />
       <MantineProvider>
 
-        <div className={styles.container}>
+        <div className={`${styles.container} ${mobileMenuOpen ? styles.pushDown : ''}`}>
           <div className={styles.mapContainer}>
             {loadMap && (
               <LoadScriptNext googleMapsApiKey={API_KEY}>

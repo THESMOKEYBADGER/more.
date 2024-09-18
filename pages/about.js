@@ -6,6 +6,7 @@ import { HeaderSimple } from '../components/Header';
 import { MantineProvider } from '@mantine/core';
 import HeroBullets from '../components/HeroBullets';
 import '@mantine/core/styles.css';
+import { useState } from 'react';
 
 import {
   Badge,
@@ -66,45 +67,46 @@ function FeaturesCards() {
 }
 
 export default function About() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <MantineProvider
       theme={{ /* optional theme overrides */ }}
       withGlobalStyles
       withNormalizeCSS
     >
-
       <div className={styles.pageWrapper}>
-        <HeaderSimple />
+        <HeaderSimple onMenuToggle={setMobileMenuOpen} />
         <Head>
           <title>About Us</title>
           <meta name="description" content="Learn more about us and what we do." />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <div className={`${styles.container} ${mobileMenuOpen ? styles.pushDown : ''}`}>
+          <div className={styles.hero}>
+            <HeroBullets />
+          </div>
 
-        <div className={styles.hero}>
-          <HeroBullets />
+          <Container size="lg" py="xl">
+            <Group justify="center">
+              <Badge className={classes.badge} variant="filled" size="lg">
+                Currently associated NGO's
+              </Badge>
+            </Group>
+
+            <Title order={2} className={classes.title} ta="center" mt="sm">
+              Find out about who we support
+            </Title>
+
+            <Text c="dimmed" className={classes.description} ta="center" mt="md">
+              At the end of every month we count up how many orders were placed associated with each initiative, and then donate directly to them.
+            </Text>
+
+            <FeaturesCards />
+          </Container>
         </div>
 
-        <Container size="lg" py="xl">
-          <Group justify="center">
-            <Badge className={classes.badge} variant="filled" size="lg">
-              Currently associated NGO's
-            </Badge>
-          </Group>
-
-          <Title order={2} className={classes.title} ta="center" mt="sm">
-            Find out about who we support
-          </Title>
-
-          <Text c="dimmed" className={classes.description} ta="center" mt="md">
-            At the end of every month we count up how many orders were placed associated with each initaitive, and then donate directly to them.
-          </Text>
-
-          <FeaturesCards />
-        </Container>
-
         <main className={styles.main}>
-
         </main>
 
         <FooterCentered />

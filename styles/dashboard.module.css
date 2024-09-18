@@ -74,11 +74,12 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .container {
-    margin-top: -10px;
+    margin-top: -60px;
     flex-direction: column; /* Stack the map and switcher vertically */
     align-items: center; /* Center both map and switcher */
     gap: 10px; /* Reduce the gap between elements */
     padding: 0; /* Remove extra padding on mobile */
+    transition: margin-top 0.2s ease; 
   }
 
   .mapContainer {
@@ -96,6 +97,10 @@
     box-sizing: border-box; /* Include padding in width/height */
     text-align: center; /* Center text and elements inside the switcher */
   }
+}
+
+.pushDown {
+  margin-top: -10px; /* Adjust this value based on your mobile menu height */
 }
 
 

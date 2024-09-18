@@ -4,8 +4,10 @@ import '@mantine/core/styles.css';
 import { FooterCentered } from '../components/footer';
 import { HeaderSimple } from '../components/Header';
 import styles from '../styles/contact.module.css'
+import { useState } from 'react';
 
 function GetInTouchSimple() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const form = useForm({
     initialValues: {
       name: '',
@@ -23,8 +25,8 @@ function GetInTouchSimple() {
   return (
     <MantineProvider>
       <div className={styles.pageWrapper}>
-        <HeaderSimple />
-
+      <HeaderSimple onMenuToggle={setMobileMenuOpen} />
+      <div className={`${styles.container} ${mobileMenuOpen ? styles.pushDown : ''}`}>
         <main className={styles.content}>
 
           <form onSubmit={form.onSubmit(() => { })}>
@@ -85,8 +87,8 @@ function GetInTouchSimple() {
               </Button>
             </Group>
           </form>
-
         </main>
+        </div>
         <FooterCentered /> {/* Add the Footer component here */}
       </div>
     </MantineProvider>

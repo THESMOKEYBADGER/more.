@@ -11,6 +11,7 @@
     box-sizing: border-box;
     border-radius: 8px;
     margin-bottom: 100px;
+    z-index: 1000;
 
   }
   
@@ -48,6 +49,20 @@
   .burger-container {
     display: none;
   }
+
+
+  .mobileLinks {
+    display: none;
+    opacity: 0;
+    transition: none; /* Remove default transition */
+  }
+  
+  .mobileLinks.visible {
+    opacity: 1;
+    transition: opacity 0.2s ease-in; /* Apply transition only when becoming visible */
+  }
+
+
   
   @media (max-width: 768px) {
     .header {
@@ -73,7 +88,8 @@
     }
   
     .mobileLinks {
-      
+
+      margin-top: 23px;
       display: flex;
       flex-direction: row; /* Changed from column to row */
       justify-content: center; /* Center the links horizontally */
@@ -83,7 +99,7 @@
       right: 0;
       left: 0;
       background-color: var(--mantine-color-body);
-      padding: 40px;
+      padding: 15px;
       box-shadow: var(--mantine-shadow-sm);
       margin-right: 20px;
       margin-left: 20px;
@@ -91,7 +107,9 @@
     }
   
     /* Add some spacing between the links */
-    .mobileLinks .link {
+    .mobileLinks .link{
       margin: 0 rem(5px);
+      
     }
   }
+

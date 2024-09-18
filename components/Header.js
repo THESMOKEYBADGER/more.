@@ -13,10 +13,15 @@ const links = [
   { link: '/contact', label: 'Contact' },
 ];
 
-export function HeaderSimple() {
+export function HeaderSimple({ onMenuToggle }) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const router = useRouter();
   const [active, setActive] = useState(router.pathname);
+
+  const handleToggle = () => {
+    toggle();
+    onMenuToggle(!opened);
+  };
 
   const items = links.map((link) => (
     <Link
@@ -61,14 +66,12 @@ export function HeaderSimple() {
       </Container>
 
       <div className={classes['burger-container']}>
-        <Burger opened={opened} onClick={toggle} size="sm" />
+        <Burger opened={opened} onClick={handleToggle} size="sm" />
       </div>
 
-      {opened && (
-        <div className={classes.mobileLinks}>
-          {mobileItems}
-        </div>
-      )}
+      <div className={`${classes.mobileLinks} ${opened ? classes.visible : ''}`}>
+        {mobileItems}
+      </div>
     </header>
   );
 }

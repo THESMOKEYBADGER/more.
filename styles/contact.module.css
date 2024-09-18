@@ -28,6 +28,11 @@
     .content{
         padding:10px;
     }
+
+    .container{
+      transition: margin-top 0.2s ease; 
+      margin-top: -70px;
+    }
   }
 
 
@@ -44,3 +49,9 @@
 .input{
   background-color: white;
 }
+
+
+.pushDown {
+  margin-top: -10px; /* Adjust this value based on your mobile menu height */
+}
+

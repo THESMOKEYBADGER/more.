@@ -73,6 +73,14 @@
     
     margin-bottom:40px;
   }
+  .container{
+    margin-top: -60px;
+    transition: margin-top 0.2s ease; 
+  }
+}
+
+.pushDown {
+  margin-top: -10px; /* Adjust this value based on your mobile menu height */
 }
 
 .description {
