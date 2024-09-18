@@ -105,3 +105,16 @@
   display: flex;
   transition: opacity 0.5s ease-in; /* Smooth transition when becoming visible */
 }
+
+@media (max-width: 400px) {
+
+  .mobileLinks {
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+  .link{
+    padding: 8px 6px;
+
+  }
+
+}
