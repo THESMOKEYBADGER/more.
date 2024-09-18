@@ -50,10 +50,8 @@
   
   border-radius: 8px;
   border-color: #f2f2f2;
+  margin-bottom: -200px;
 
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex: 1;
-  }
 }
 
 .image {
@@ -88,3 +86,10 @@
   margin-bottom: 100px;
 }
 
+
+@media (max-width: 576px) {
+  .control{
+    margin-bottom: 200px;
+  }
+  
+}
