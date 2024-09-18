@@ -50,7 +50,7 @@ export default function Choices() {
     });
 
     if (response.ok) {
-      router.push('/dashboard'); // Redirect to the dashboard after successful submission
+      router.push('/about'); // Redirect to the about after successful submission
     } else {
       console.error('Failed to save user data');
     }
