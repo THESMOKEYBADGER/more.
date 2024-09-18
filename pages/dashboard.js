@@ -207,8 +207,6 @@ function Map() {
 
 
   return (
-
-
     <div className={styles.pageWrapperDash}>
       <HeaderSimple onMenuToggle={setMobileMenuOpen} />
       <MantineProvider>

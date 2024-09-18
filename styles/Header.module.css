@@ -1,101 +1,89 @@
 .header {
-    height: rem(56px);
-    margin-bottom: rem(120px);
-    background-color: #f2f2f2;
-    border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 85px;
-    padding-right: 230px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 100px;
-    z-index: 1000;
+  height: 56px;
+  margin-bottom: 120px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 85px;
+  padding-right: 230px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  z-index: 1000;
+}
 
-  }
-  
-  .logo {
-    flex-shrink: 0;
-    padding-left: 10px;
-  }
-  
-  .inner {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-  }
-  
-  .link {
-    display: block;
-    line-height: 1;
-    padding: rem(8px) rem(12px);
-    border-radius: var(--mantine-radius-sm);
-    text-decoration: none;
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
-    font-size: var(--mantine-font-size-sm);
-    font-weight: 500;
-  
-    @mixin hover {
-      background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-    }
-  
-    [data-mantine-color-scheme] &[data-active] {
-      background-color: #5b3283;
-      color: var(--mantine-color-white);
-    }
-  }
-  
-  .burger-container {
-    display: none;
-  }
+.logo {
+  flex-shrink: 0;
+  padding-left: 10px;
+}
 
+.inner {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
 
-  .mobileLinks {
-    display: none;
-    opacity: 0;
-    transition: none; /* Remove default transition */
-  }
+.link {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
   
-  .mobileLinks.visible {
-    opacity: 1;
-    transition: opacity 0.2s ease-in; /* Apply transition only when becoming visible */
-  }
+}
 
+.link[data-active] {
+  background-color: #5b3283; /* Purple background for active link */
+  color: var(--mantine-color-white); /* White text on active link */
+}
 
-  
-  @media (max-width: 768px) {
-    .header {
+.burger-container {
+  display: none;
+}
+
+.mobileLinks {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Set transition on opacity */
+}
+
+@media (max-width: 768px) {
+  .header {
       padding-left: 10px;
       padding-right: 10px;
       justify-content: space-between;
-    }
-  
-    .logo {
+  }
+
+  .logo {
       padding-left: 0;
       margin-right: auto;
       margin-left: -8px;
-    }
-  
-    .inner {
+  }
+
+  .inner {
       display: none;
-    }
-  
-    .burger-container {
+  }
+
+  .burger-container {
       display: flex;
       align-items: center;
       margin-left: auto;
-    }
-  
-    .mobileLinks {
+  }
 
+  .mobileLinks {
       margin-top: 23px;
-      display: flex;
-      flex-direction: row; /* Changed from column to row */
-      justify-content: center; /* Center the links horizontally */
-      align-items: center; /* Center the links vertically */
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; /* Add transition for opacity */
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: rem(56px);
+      top: 56px;
       right: 0;
       left: 0;
       background-color: var(--mantine-color-body);
@@ -104,12 +92,16 @@
       margin-right: 20px;
       margin-left: 20px;
       border-radius: 8px;
-    }
-  
-    /* Add some spacing between the links */
-    .mobileLinks .link{
-      margin: 0 rem(5px);
-      
-    }
   }
 
+  .mobileLinks .link {
+      margin: 0 5px;
+      transition: opacity 0.5s ease-in; /* Apply transition to link */
+  }
+}
+
+.mobileLinks.visible {
+  opacity: 1;
+  display: flex;
+  transition: opacity 0.5s ease-in; /* Smooth transition when becoming visible */
+}
