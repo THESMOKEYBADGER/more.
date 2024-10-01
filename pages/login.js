@@ -54,6 +54,7 @@ export default function Login() {
       
       // We don't set loading to false here, as we want to keep the spinner until the new page loads
     } catch (error) {
+      console.log('Error during login:', error);
       setError('Incorrect username or password. Please try again.');
       setLoading(false);
     }

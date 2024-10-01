@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   margin-top:-10px;
-  
   background-color: #f2f2f2;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -13,7 +12,6 @@
 }
 
 .content {
-  
   max-width: rem(1000px);
   margin-right: calc(var(--mantine-spacing-xl) * 3);
 
@@ -27,7 +25,6 @@
 }
 
 .title {
-  
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-family:
     Greycliff CF,
@@ -43,11 +40,9 @@
 
 .toDashboard{
   background-color:  #adcbc3;
-  
 }
 
 .control {
-  
   border-radius: 8px;
   border-color: #f2f2f2;
   margin-bottom: -200px;
